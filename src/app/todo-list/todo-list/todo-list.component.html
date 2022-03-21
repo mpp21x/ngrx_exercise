@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <input type="email" class="form-control"   [(ngModel)]="text">
+    </div>
+    <button class="btn btn-primary btn-sm" type="button" (click)="add()">儲存</button>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col" style="width: 60%">#</th>
+        <th scope="col" style="width: 25%">Text</th>
+        <th scope="col" style="width: 15%">Done</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of data">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.text}}</td>
+        <td>{{item.done}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
